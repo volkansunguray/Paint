@@ -34,11 +34,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnrenksec
             // 
-            this.btnrenksec.Location = new System.Drawing.Point(12, 130);
+            this.btnrenksec.Location = new System.Drawing.Point(12, 157);
             this.btnrenksec.Name = "btnrenksec";
             this.btnrenksec.Size = new System.Drawing.Size(152, 32);
             this.btnrenksec.TabIndex = 0;
@@ -48,7 +49,7 @@
             // 
             // btnYaz
             // 
-            this.btnYaz.Location = new System.Drawing.Point(12, 92);
+            this.btnYaz.Location = new System.Drawing.Point(12, 119);
             this.btnYaz.Name = "btnYaz";
             this.btnYaz.Size = new System.Drawing.Size(152, 32);
             this.btnYaz.TabIndex = 1;
@@ -97,7 +98,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 168);
+            this.button1.Location = new System.Drawing.Point(12, 195);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(152, 32);
             this.button1.TabIndex = 5;
@@ -105,12 +106,30 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Çizgi",
+            "Daire",
+            "Kare",
+            "Elipse",
+            "Pasta Dilimi",
+            "İçi Dolu Daire",
+            "İçi Dolu Dikdörtgen"});
+            this.comboBox3.Location = new System.Drawing.Point(12, 92);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(152, 21);
+            this.comboBox3.TabIndex = 6;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 729);
+            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.textBox1);
@@ -137,6 +156,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }
 

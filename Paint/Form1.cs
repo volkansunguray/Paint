@@ -57,7 +57,7 @@ namespace Paint
 
         private void btnYaz_Click(object sender, EventArgs e)
         {
-            
+
             string yazitipi = comboBox1.Text;
             Graphics g = this.CreateGraphics();
             Font myFont = new Font(yazitipi, Convert.ToInt32(comboBox2.Text));
@@ -70,6 +70,45 @@ namespace Paint
         {
             Graphics g = this.CreateGraphics();
             g.Clear(Color.White);
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Graphics g = this.CreateGraphics();
+            Pen myPen = new Pen(Color.DarkRed);
+            SolidBrush mySolidBrush = new SolidBrush(Color.DarkRed);
+            g.Clear(Color.White);
+            switch (comboBox3.SelectedIndex)
+            {
+                case 0: // Çizgi 
+                        //g. DrawLine(myPen, x, y, width, height); 
+                    g.DrawLine(myPen, 220, 20, 200, 210);
+                    break;
+                case 1: // Daire 
+                        //g.DrawEllipse(myPen, x, y, width, height); 
+                    g.DrawEllipse(myPen, 250, 50, 150, 150);
+                    break;
+                case 2: // Kare
+                        //DrawRectangle(myPen, x, y, width, height);
+                    g.DrawRectangle(myPen, 250, 50, 150, 150);
+                    break;
+                case 3: // Ellipse
+                        //DrawEllipse(myPen, x, y, width, height);
+                    g.DrawEllipse(myPen, 250, 85, 150, 115);
+                    break;
+                case 4: // Pie
+                        // DrawPie(Pen, x, y, genişlik, yükseklik, Başlangıç açısı, başlangıçtan bitişe açı);
+                    g.DrawPie(myPen, 250, 50, 150, 150, 0, 45);
+                    break;
+                case 5: // İçi dolu daire
+                    g.FillEllipse(mySolidBrush, 250, 50, 150, 150);
+                    break;
+                case 6: // içi dolu Dikdörtgen
+                    g.FillRectangle(mySolidBrush, 250, 50, 150, 150);
+                    break;
+            }
+            g.Dispose(); // Graphics nesnesini serbest bırak
+
         }
 
         private void btnrenksec_Click(object sender, EventArgs e)
